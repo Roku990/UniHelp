@@ -14,6 +14,18 @@ class LoginData(BaseModel):
     password: str
 
 
+from fastapi.middleware.cors import CORSMiddleware
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],  # allow all origins for testing
+    allow_credentials=True,
+    allow_methods=["*"],  # allow GET, POST, OPTIONS, etc.
+    allow_headers=["*"],
+)
+
+
+
 @app.post("/login")
 def login(data: LoginData):
     if check_credentials(data.userID, data.password):
