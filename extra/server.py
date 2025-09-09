@@ -1,8 +1,11 @@
 # Here the server related code
 
-
-from fastapi import fastAPI 
+import csv
+import os
+import uvicorn
+from fastapi import FastAPI
 from pydantic import BaseModel
+from fastapi import HTTPException
 
 app = FastAPI()
 
