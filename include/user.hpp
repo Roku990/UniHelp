@@ -4,10 +4,11 @@
 
 #include <iostream>
 #include <list>
+#include <memory>
 
 
 namespace unihelp{
-    using json = nlohmann::json;
+    
     using SubjectPtr = std::shared_ptr<Subject>;
 
     class User{
