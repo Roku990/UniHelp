@@ -30,4 +30,4 @@ def check_credentials(userID, password):
 
 if __name__ == '__main__':
   this_python_file = os.path.basename(__file__)[:-3]
-  instance = uvicorn.run(f"{this_python_file}:app", host="10.0.2.15", port=8000, log_level="info", reload=True)
+  instance = uvicorn.run(f"{this_python_file}:app", host="127.0.0.1", port=8000, log_level="info", reload=True)
